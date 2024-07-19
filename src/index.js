@@ -1,9 +1,5 @@
-import init from "./module";
 import "./styles/main.scss";
-import webpackLogo from "./assets/webpackLogo.png";
+import init from "./global";
 
-const logo = document.getElementById("logo");
-logo.src = webpackLogo;
-
-console.log("index.js file");
+console.log("Home page");
 console.log(init());

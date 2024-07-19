@@ -1,0 +1,26 @@
+@import "../../styles/main.scss";
+
+h2 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+h2 {
+  animation: showup 10s infinite;
+}
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

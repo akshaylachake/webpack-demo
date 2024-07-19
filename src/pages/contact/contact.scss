@@ -1,0 +1,45 @@
+@import "../../styles/main.scss";
+
+h2 {
+  animation: reveal 2s;
+}
+
+h2 span {
+  //   margin-left: -8000px;
+  animation: slidein 2s;
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: -8000px;
+  }
+  20% {
+    margin-left: -8000px;
+  }
+  35% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  20% {
+    opacity: 1;
+    width: 0px;
+  }
+  30% {
+    width: auto;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
