@@ -55,6 +55,6 @@ module.exports = {
       filename: "index.html",
       template: "src/main.html",
     }),
-    // new BundleAnalyzerPlugin(), // it will open your code base analyzer on run build
+    // new BundleAnalyzerPlugin(), // it will open your code base analyzer
   ],
 };
