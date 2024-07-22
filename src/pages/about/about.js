@@ -1,4 +1,4 @@
 import "./about.scss";
-import "../../global";
+import init from "../../global";
 
 console.log("About page");

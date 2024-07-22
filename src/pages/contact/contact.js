@@ -1,4 +1,4 @@
 import "./contact.scss";
-import "../../global";
+import init from "../../global";
 
 console.log("Contact page");

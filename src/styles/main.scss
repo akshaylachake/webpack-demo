@@ -16,7 +16,23 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 20px;
+}
+
+#header {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+footer {
+  background-color: $secondary-color;
+  color: #333;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 1.5rem;
 }
 
 .container {
@@ -37,4 +53,62 @@ h1 {
 
 #logo {
   width: 8rem;
+}
+
+// navbar css
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $secondary-color;
+  padding: 10px 20px;
+}
+
+.navbar a {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 16px;
+  display: block;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+  color: #fff;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar .menu {
+  display: flex;
+}
+
+.navbar .menu a {
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .navbar .menu {
+    flex-direction: column;
+    display: none;
+  }
+
+  .navbar .menu a {
+    margin-left: 0;
+    padding: 10px;
+    border-top: 1px solid #575757;
+  }
+
+  .navbar .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  color: #333;
 }

@@ -3,13 +3,14 @@ const HtmlWebpackPlugin = require("html-webpack-plugin"); // use to create dist 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // use to create css file instead of inline style
 const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "development",
   entry: {
     index: path.resolve(__dirname, "src/index.js"),
-    about: path.resolve(__dirname, "src/pages/about/index.js"),
-    contact: path.resolve(__dirname, "src/pages/contact/index.js"),
+    about: path.resolve(__dirname, "src/pages/about/about.js"),
+    contact: path.resolve(__dirname, "src/pages/contact/contact.js"),
   },
   output: {
     // create bulid file
@@ -31,6 +32,10 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        use: ["html-loader"],
+      },
       {
         test: /\.scss$/,
         use: [
@@ -85,6 +90,7 @@ module.exports = {
       chunks: ["contact"],
     }),
     new MiniCssExtractPlugin(),
+    new CleanWebpackPlugin(), // remove/clean your build folder(s) before building
     // new BundleAnalyzerPlugin(), // it will open your code base analyzer
   ],
 };
