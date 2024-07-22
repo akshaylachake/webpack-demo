@@ -68,29 +68,29 @@ module.exports = {
     },
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      // creates dist folder with index.html file
-      title: "Webpack Demo App",
-      filename: "index.html",
-      template: "src/main.html",
-      chunks: ["index"],
-    }),
-    new HtmlWebpackPlugin({
-      // creates dist folder with about.html file
-      title: "About",
-      filename: "about.html",
-      template: "src/pages/about/about.html",
-      chunks: ["about"],
-    }),
-    new HtmlWebpackPlugin({
-      // creates dist folder with contact.html file
-      title: "Contact",
-      filename: "contact.html",
-      template: "src/pages/contact/contact.html",
-      chunks: ["contact"],
-    }),
     new MiniCssExtractPlugin(),
     new CleanWebpackPlugin(), // remove/clean your build folder(s) before building
     // new BundleAnalyzerPlugin(), // it will open your code base analyzer
+    new HtmlWebpackPlugin({
+      // creates index.html file in dist folder
+      title: "Webpack Demo App",
+      filename: "index.html",
+      template: "src/main.ejs",
+      chunks: ["index"],
+    }),
+    new HtmlWebpackPlugin({
+      // creates about.html file in dist folder
+      title: "About",
+      filename: "about.html",
+      template: "src/pages/about/about.ejs",
+      chunks: ["about"],
+    }),
+    new HtmlWebpackPlugin({
+      // creates contact.html file in dist folder
+      title: "Contact",
+      filename: "contact.html",
+      template: "src/pages/contact/contact.ejs",
+      chunks: ["contact"],
+    }),
   ],
 };
